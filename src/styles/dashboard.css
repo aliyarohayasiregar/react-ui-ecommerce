@@ -1,0 +1,139 @@
+/* Dashboard Layout */
+.dashboard-container {
+  @apply bg-gray-50 min-h-screen;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  @apply w-64 min-h-screen bg-gradient-to-b from-blue-800 to-blue-600 text-white fixed left-0 top-0 transition-all duration-300 ease-in-out z-30;
+}
+
+.sidebar-header {
+  @apply text-xl font-bold p-6 border-b border-blue-700;
+}
+
+.sidebar-menu-item {
+  @apply flex items-center space-x-3 px-6 py-3 hover:bg-blue-700 transition-colors duration-200 cursor-pointer text-white no-underline;
+}
+
+.sidebar-menu-item.active {
+  @apply bg-blue-700;
+}
+
+/* Main Content */
+.main-content {
+  @apply flex-1 ml-64 p-8;
+}
+
+/* Container untuk konten */
+.content-container {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Stat Cards */
+.stat-card {
+  @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+}
+
+.stat-card-title {
+  @apply text-gray-600 text-sm font-medium;
+}
+
+.stat-card-value {
+  @apply text-2xl font-bold text-gray-800 mt-2;
+}
+
+.stat-card-icon {
+  @apply text-3xl text-blue-500;
+}
+
+/* Recent Orders Table */
+.orders-table {
+  @apply w-full bg-white rounded-xl shadow-lg overflow-hidden;
+}
+
+.orders-table thead {
+  @apply bg-gray-50;
+}
+
+.orders-table th {
+  @apply px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.orders-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+.orders-table tr {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+/* Status Badges */
+.status-badge {
+  @apply px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.status-selesai {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-proses {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-menunggu {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Sales Chart */
+.chart-container {
+  @apply bg-white rounded-xl shadow-lg p-6;
+}
+
+.chart-title {
+  @apply text-lg font-semibold text-gray-800 mb-4;
+}
+
+/* Responsive Grid untuk StatCards */
+.stat-cards-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6;
+}
+
+/* Responsive padding untuk konten */
+.content-padding {
+  @apply p-4 lg:p-6;
+}
+
+/* Responsive table container */
+.table-container {
+  @apply w-full overflow-x-auto rounded-lg shadow-lg;
+}
+
+/* Responsive text sizes */
+.page-title {
+  @apply text-2xl lg:text-3xl font-bold text-gray-800;
+}
+
+.card-title {
+  @apply text-base lg:text-lg font-semibold;
+}
+
+/* Responsive spacing */
+.section-spacing {
+  @apply my-4 lg:my-6;
+}
+
+/* Responsive buttons */
+.action-button {
+  @apply px-3 py-1.5 lg:px-4 lg:py-2 text-sm lg:text-base rounded-lg;
+}
+
+/* Responsive form fields */
+.form-field {
+  @apply w-full p-2 lg:p-3 rounded-md border border-gray-300;
+}
+
+/* Responsive modal */
+.modal-container {
+  @apply w-full max-w-md lg:max-w-lg mx-4 lg:mx-auto;
+}

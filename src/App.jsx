@@ -1,23 +1,26 @@
-import { useState } from 'react'
-import Header from './components/Header';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Dashboard from './components/Dashboard';
+import Products from './pages/Products';
+import Orders from './pages/Orders';
+import Customers from './pages/Customers';
+import Reports from './pages/Reports';
 
 function App() {
- const[likes,setlikes]=useState(0);
-
- function handleClick(){
-  setlikes(likes+1);
- }
-
- return (
-  <div>
- <Header>
-  <button onClick={handleClick}>Like ({likes})</button>
- </Header>
-  </div>
-
- );
- 
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="products" element={<Products />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="customers" element={<Customers />} />
+          <Route path="reports" element={<Reports />} />
+          <Route path="settings" element={<div>Halaman Pengaturan</div>} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

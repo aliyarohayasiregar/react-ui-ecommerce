@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Sidebar Transitions */
+  .sidebar-transition {
+    @apply transform transition-transform duration-300 ease-in-out;
+  }
+
+  /* Content Wrapper */
+  .content-wrapper {
+    @apply w-full min-h-screen bg-gray-50 transition-all duration-300;
+  }
+
+  /* Responsive Padding */
+  .responsive-padding {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  /* Card Grid */
+  .card-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6;
+  }
+
+  /* Table Responsive */
+  .table-responsive {
+    @apply w-full overflow-x-auto shadow-lg rounded-lg;
+  }
+}
