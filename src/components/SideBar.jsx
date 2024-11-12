@@ -32,7 +32,7 @@ const SideBar = ({ onClose }) => {
           <NavLink
             key={index}
             to={item.path}
-            onClick={() => onClose()} // Tutup sidebar di mobile setelah klik
+            onClick={() => onClose()}
             className={({ isActive }) => `
               flex items-center space-x-3 px-4 py-3 mx-2 rounded-lg
               transition-colors duration-200
@@ -47,14 +47,18 @@ const SideBar = ({ onClose }) => {
         ))}
       </nav>
 
-      {/* Footer */}
+      {/* Footer with Copyright */}
       <div className="p-4 border-t border-blue-700">
-        <div className="flex items-center space-x-3 px-4 py-2 rounded-lg">
+        <div className="flex flex-col items-center space-y-2 text-center">
           <span className="text-sm text-blue-100">v1.0.0</span>
+          <div className="text-xs text-blue-100">
+            <p>© 2024 E-Commerce Admin</p>
+            <p>Created by Aliya Rohaya Siregar</p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SideBar; 
+export default SideBar;
